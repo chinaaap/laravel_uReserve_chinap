@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\LivewireTestController;
+use Barryvdh\Debugbar\DataCollector\LivewireCollector;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,4 +28,11 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+});
+
+// 追記
+Route::controller(LivewireTestController::class)
+->prefix('livewire-test')->group(function() {
+    Route::get('index', 'index');
+    Route::get('register', 'register')->name('register');
 });
