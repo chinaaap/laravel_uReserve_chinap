@@ -1,12 +1,10 @@
 <html>
   <head>
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <!-- Scripts -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    @livewireStyles
-
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
+        <!-- Styles -->
+        @livewireStyles
   </head>
   <body>
     livewireテスト <span class="text-blue-600">register</span>

@@ -32,7 +32,7 @@ Route::middleware([
 
 // 追記
 Route::controller(LivewireTestController::class)
-->prefix('livewire-test')->group(function() {
-    Route::get('index', 'index');
+->prefix('livewire-test')->name('livewire-test.')->group(function() {
+    Route::get('index', 'index')->name('index');
     Route::get('register', 'register')->name('register');
 });
