@@ -1,19 +1,3 @@
-{{-- @auth
-    <x-event-detail-auth
-    :event = '$event'
-    :reservablePeople = '$reservablePeople'
-    :isReserved = '$isReserved'
-/>
-@endauth
-
-@guest
-    <x-event-detail-guest
-    :event = '$event'
-    :reservablePeople = '$reservablePeople'
-    :isReserved = '$isReserved'
-/>
-@endguest --}}
-
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">

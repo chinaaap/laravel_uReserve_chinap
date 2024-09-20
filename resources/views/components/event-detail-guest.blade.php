@@ -1,20 +1,4 @@
-{{-- @auth
-    <x-event-detail-auth
-    :event = '$event'
-    :reservablePeople = '$reservablePeople'
-    :isReserved = '$isReserved'
-/>
-@endauth
-
-@guest
-    <x-event-detail-guest
-    :event = '$event'
-    :reservablePeople = '$reservablePeople'
-    :isReserved = '$isReserved'
-/>
-@endguest --}}
-
-<x-app-layout>
+<x-calendar-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             イベント詳細
@@ -33,7 +17,7 @@
                     </div>
                 @endif
 
-                <form method="post" action="{{ route('events.reserve', [ 'id' => $event->id ]) }}">
+                <form method="get" action="{{ route('login') }}">
                     @csrf
                     <div>
                         <x-label for="event_name" value="イベント名" />
@@ -96,4 +80,4 @@
         </div>
     </div>
 
-</x-app-layout>
+</x-calendar-layout>
